@@ -5,6 +5,14 @@
  */
 package com.dev.saurabh;
 
+/**
+ * Developer : Saurabh Kumar Singh
+ * Copyright of the code is owned by Saurabh Kr Singh (saurabh.nsit@gmail.com)
+ * You are free to use this code either in free/commercial
+ * product. However anytime my code is used please mention
+ * and give credit to my name and e-mail id.
+ */
+
 import java.util.ArrayList;
 
 public class Problem5 {

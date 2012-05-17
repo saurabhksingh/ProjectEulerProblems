@@ -3,11 +3,12 @@ package com.dev.saurabh;
 import java.util.ArrayList;
 
 /**
- * Created with IntelliJ IDEA.
- * User: skumarsi
+ * Developer : Saurabh Kumar Singh
  * Date: 18/5/12
- * Time: 3:26 AM
- * To change this template use File | Settings | File Templates.
+ * Copyright of the code is owned by Saurabh Kr Singh (saurabh.nsit@gmail.com)
+ * You are free to use this code either in free/commercial
+ * product. However anytime my code is used please mention
+ * and give credit to my name and e-mail id.
  */
 public class Problem10 {
     /**

@@ -3,7 +3,15 @@
  */
 package com.dev.saurabh;
 
-public class BelowKDivide3Or5 {
+/**
+ * Developer : Saurabh Kumar Singh
+ * Copyright of the code is owned by Saurabh Kr Singh (saurabh.nsit@gmail.com)
+ * You are free to use this code either in free/commercial
+ * product. However anytime my code is used please mention
+ * and give credit to my name and e-mail id.
+ */
+
+public class Problem1 {
 
     public static void main(String args[]) {
 
