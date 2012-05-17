@@ -82,7 +82,11 @@ public class Problem8 {
         for(int i=startPoint+9; i<input.length;){
             System.out.println(i);
             if(inputIntArray[i]==0 || inputIntArray[i-1]==0 || inputIntArray[i-2]==0 ||  inputIntArray[i-3]==0 || inputIntArray[i-4]==0 ) {
-                i++;
+                int increment = 1;
+                if(inputIntArray[i-3]==0) increment = 2;
+                else if(inputIntArray[i-2]==0) increment = 3;
+                else if(inputIntArray[i-1]==0) increment = 4;
+                i = i+increment;
                 isContinuityMaintained = false;
             }
             else{
