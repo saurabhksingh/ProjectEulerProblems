@@ -31,7 +31,7 @@ public class Problem8 {
      */
     public static void main(String[] args) {
 
-        String inputData = "73167176531330624919225119674426574742355349194934" +
+        String inputData = "7316717653133062491922435119674426574742355349194934" +
                 "96983520312774506326239578318016984801869478851843" +
                 "85861560789112949495459501737958331952853208805511" +
                 "12540698747158523863050715693290963295227443043557" +
@@ -59,10 +59,53 @@ public class Problem8 {
 
 
         int product = 1;
+        int k = 0;
+        int lastIndexChecked = 0;
         for (int i = 0; i < input.length; i++) {
             inputIntArray[i] = input[i] - '0';
         }
 
+        int largestProduct = 0;
+        int startPoint =  0;
+        for(int i=0; i<input.length-5; i++)
+        {
+            if(inputIntArray[i]!=0 && inputIntArray[i+1]!=0 && inputIntArray[i+2]!=0 &&  inputIntArray[i+3]!=0 && inputIntArray[i+4]!=0 ){
+                startPoint = i;
+                largestProduct =  inputIntArray[i] * inputIntArray[i+1] * inputIntArray[i+2] * inputIntArray[i+3]* inputIntArray[i+4];
+                break;
+            }
+        }
+
+        int tmpProduct = largestProduct;
+        boolean isContinuityMaintained = true;
+        System.out.println(startPoint);
+        for(int i=startPoint+9; i<input.length;){
+            System.out.println(i);
+            if(inputIntArray[i]==0 || inputIntArray[i-1]==0 || inputIntArray[i-2]==0 ||  inputIntArray[i-3]==0 || inputIntArray[i-4]==0 ) {
+                i++;
+                isContinuityMaintained = false;
+            }
+            else{
+                if(isContinuityMaintained){
+                    tmpProduct = (tmpProduct/inputIntArray[i-5]) * inputIntArray[i];
+                    if(tmpProduct > largestProduct){
+                        largestProduct = tmpProduct;
+                    }
+                }
+                else{
+                    if((i+4) < inputIntArray.length){
+                        tmpProduct = inputIntArray[i] * inputIntArray[i-1] * inputIntArray[i-2] *  inputIntArray[i-3] * inputIntArray[i-4];
+                        if(tmpProduct > largestProduct){
+                            largestProduct = tmpProduct;
+                        }
+                    }
+                    isContinuityMaintained = true;
+                }
+                i++;
+            }
+        }
+
+        System.out.println(largestProduct);
     }
 
 }
