@@ -63,8 +63,8 @@ public class Problem12 {
 
     private static int getNumberOfFactors(long input) {
         int numberOfFactors = 0;
-
-        for (int i = 1; i <= Math.sqrt(input); i++)
+        int upperLimit = (int)Math.sqrt(input);
+        for (int i = 1; i <= upperLimit ; i++)
         {
             if (input % i == 0)
                 numberOfFactors += 2;
