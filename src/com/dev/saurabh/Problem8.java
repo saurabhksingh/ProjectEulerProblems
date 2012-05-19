@@ -67,8 +67,6 @@ public class Problem8 {
 
 
         int product = 1;
-        int k = 0;
-        int lastIndexChecked = 0;
         for (int i = 0; i < input.length; i++) {
             inputIntArray[i] = input[i] - '0';
         }
