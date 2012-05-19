@@ -42,7 +42,6 @@ public class Problem12 {
          */
 
         long currentNumber = 0;
-        long currentTriangleNumber = 0;
         long count = 1;
         long startTime = System.currentTimeMillis();
         while (true) {
